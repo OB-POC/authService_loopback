@@ -1,0 +1,25 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "authData": {
+    "name": "authData",
+    "baseURL": "http://localhost:5000/dbService/",
+    "crud": true,
+    "connector": "rest",
+    "operations": [{
+      "functions": {
+        "getData": []
+      },
+      "template": {
+        "method": "GET",
+        "url": "http://localhost:5000/dbService/users",
+        "options": {
+          "strictSSL": true,
+          "useQuerystring": true
+        }
+      }
+    }]
+  }
+}
